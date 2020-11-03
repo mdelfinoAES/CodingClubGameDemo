@@ -90,6 +90,15 @@ function draw() {
     fill(255);
     text("GAME OVER", 180, 200);
     text("Final score: " + player.score, 180, 250);
+    text("Press 'R' to restart", 180, 300);
+    if (keyIsDown(82)) {//82 is the keycode for R
+        gameOver = false;
+        player.x = 100;
+        player.y = 100;
+        player.score = 0;
+        enemy.x = 500;
+        enemy.y = 0;
+    }
   }
 }
 
